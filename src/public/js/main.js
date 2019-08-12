@@ -1,9 +1,9 @@
 $(document).ready(function() {
-  $("#btn-cerrar").click(function() {
-    $("#btn-cerrar")
+  $(".hamburguer-bt").click(function() {
+    $(this).toggleClass("on")
       .next()
       .slideToggle();
-      $("i", this).toggleClass("fa-bars fa-times");
+     
   });
 
   $(window).scroll(function() {
