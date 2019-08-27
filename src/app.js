@@ -3,6 +3,8 @@ const app = new express();
 const path = require ('path');
 const exphbs = require ('express-handlebars');
 const morgan = require ('morgan');
+const favicon = require('serve-favicon');
+const helmet = require ('helmet');
 
 //settings
 app.set('port', process.env.PORT || 3000);
@@ -16,8 +18,9 @@ app.set('view engine', 'handlebars');
 
 
 //middleware
+app.use(helmet());
 app.use(morgan('dev'));
-
+app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
