@@ -1,0 +1,19 @@
+.btn{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border:0.1em solid #000;
+    margin: 0 .3em .3 0;
+    font-size: 1.2rem;
+    width: auto;
+    border-radius: 15em;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    transition: all .2s;
+    cursor: pointer;
+    }
+    .btn:hover{
+      color: #000;
+      background: $nav_hover;
+    }

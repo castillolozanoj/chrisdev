@@ -1,10 +1,10 @@
-const app = require ('./app.js');
+const {app, http} = require ('./app.js');
 
 async function main(){
 
     try {
-   await app.listen(app.get('port'));
-   console.log(`Server running on http://localhost:${app.get('port')}`);
+   await http.createServer(app).listen(app.get('port'));
+   console.log(`Server running on https://localhost:${app.get('port')}`);
     } catch (err){
         console.log(err);
         process.exit(1);

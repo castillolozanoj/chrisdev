@@ -1,0 +1,30 @@
+$negrita: bold;
+
+
+.title {
+  font-size: 2rem;
+  padding: 3rem 2rem 1rem 2rem;
+}
+
+.title-dos {
+  font-weight: $negrita;
+  padding: 3rem;
+  font-size: 4rem;
+}
+
+.sub-title-dos {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.tx {
+  padding: 1rem;
+  text-align: left;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+  margin: auto;
+}

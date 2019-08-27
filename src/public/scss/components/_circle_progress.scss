@@ -1,0 +1,38 @@
+.circle-progress{
+    &,
+    &:before,
+    &:after{
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+    }
+    margin:auto;
+    position: relative;
+    transform: rotate(153deg);
+    background: linear-gradient(0deg, #FFFFFF 50%, rgba(255,255,255,.2) 50%);
+    
+    &::before, 
+    &::after{
+      top:0;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      color: #fff;
+    }
+    &::before{
+      content: "HTML5";
+      background: rgb(132, 210, 255) content-box;
+      padding: .5em;
+      box-sizing: border-box;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 8rem;
+      transform: rotate(-153deg);
+    }
+    &::after{
+      content: "85%";
+      background: linear-gradient(transparent 50%, rgb(132, 210, 255) 50% );
+      transform: scale(1.1) rotate(-153deg);
+      line-height: 13rem;
+    }
+  }

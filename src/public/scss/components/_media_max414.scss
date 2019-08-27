@@ -1,0 +1,25 @@
+@media screen and (max-width: 414px) {
+  .container .title-dos {
+    font-size: 3rem !important;
+    font-weight: bold;
+  }
+  .container .sub-title-dos {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .container .tx {
+    font-size: 1rem;
+  }
+  menu {
+    background: #000 !important;
+    a {
+      /* color: #ffe5db;*/
+      color: #000;
+      text-decoration: none;
+      line-height: 2.5;
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+}
