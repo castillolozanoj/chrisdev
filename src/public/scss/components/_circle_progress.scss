@@ -1,7 +1,7 @@
 .circle-progress {
   &,
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
@@ -24,7 +24,7 @@
     font-size: 2rem;
     text-align: center;
     line-height: 8rem;
-    
+  
   }
   &::after {
     line-height: 13rem;
@@ -40,9 +40,9 @@
 @mixin circle-progress($percent, $skill, $color, $bgcolor) {
     $progress: progress($percent);
     transform: rotate($progress);
-    background: linear-gradient(0deg, $color 50%, rbga($color, .2) 50%);
-    &:before,
-    &:after{
+    background: linear-gradient(0deg , $color 50%, rbga($color, .2) 50%);
+    &::before,
+    &::after{
         color: $color;
     }
     &::before{

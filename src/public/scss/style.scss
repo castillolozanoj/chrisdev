@@ -78,15 +78,15 @@ section {
     70,
     HTML5,
     red,
-    $pantalla-azul
+    #111
   );
 }
 
 .css{
   @include circle-progress(
-    70,
-    HTML5,
-    red,
+    10,
+    CSS,
+  orange,
     #111
   );
 }

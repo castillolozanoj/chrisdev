@@ -30,7 +30,7 @@ app.use(morgan('dev'));
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use(hostValidation({ hosts: ['127.0.0.1:3000',
                                  'localhost:3000',
-                                 '1687d761.ngrok.io', 
+                                 'f834fa59.ngrok.io', 
                                  /.*\.mydomain\.com$/] }))
 
   
