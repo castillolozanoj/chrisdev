@@ -1,14 +1,14 @@
 @import "colors";
 
 .bg-uno {
-  display: grid;
+  
   background-image: linear-gradient($bg-opacity, $bg-opacity),
     url(../img/33.png);
 }
 
 .bg-dos {
   background: $pantalla-azul;
-  z-index: -1;
+ 
 }
 
 .bg-tres {
