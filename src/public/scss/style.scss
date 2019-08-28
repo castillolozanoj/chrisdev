@@ -9,6 +9,7 @@
 @import "components/media_min769";
 @import "components/media_max414";
 @import "components/media_max1400";
+@import "components/paint-circle";
 
 
 * {
@@ -73,23 +74,7 @@ section {
   justify-content: center;
 }
 
-.html{
-  @include circle-progress(
-    70,
-    HTML5,
-    red,
-    #111
-  );
-}
 
-.css{
-  @include circle-progress(
-    10,
-    CSS,
-  orange,
-    #111
-  );
-}
 
 @media screen and (max-width: 768px) {
   .menu {

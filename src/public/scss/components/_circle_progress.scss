@@ -1,59 +1,67 @@
-.circle-progress {
-  &,
-  &::before,
-  &::after {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-  }
-  margin: auto;
+.circular-progress {
   position: relative;
-  
-
-  &::before,
-  &::after {
-    top: 0;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    
+  margin: auto;
+  &,
+  &:before,
+  &:after {
+     width: 12rem;
+     height: 12rem;
+     border-radius: 50%;
   }
-  &::before {
-    padding: 0.5em;
-    box-sizing: border-box;
-    font-size: 2rem;
-    text-align: center;
+  
+  &:before,
+  &:after {
+     position: absolute;
+     top: 0;
+     left: 0;
+     text-align: center;
+  }
+  
+  &:before {
     line-height: 8rem;
-  
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1.8rem;
   }
-  &::after {
+  
+  &:after {
     line-height: 13rem;
   }
+
 }
 
-
-@function progress($percent){
-    $deg: $percent/100 * 180;
-    @return #{$deg}deg;
+@function progress ($percent){
+  $deg: $percent/100 * 180;
+  @return #{$deg}deg;
 }
 
-@mixin circle-progress($percent, $skill, $color, $bgcolor) {
-    $progress: progress($percent);
-    transform: rotate($progress);
-    background: linear-gradient(0deg , $color 50%, rbga($color, .2) 50%);
-    &::before,
-    &::after{
-        color: $color;
-    }
-    &::before{
-        content: "#{$skill}";
-        background: $bgcolor content-box;
-        transform: rotate(-#{$progress});
-    }
-    &::after{
-        content: "#{$percent}%";
-        background: linear-gradient(transparent 50%, $bgcolor 50%);
-        transform: scale(1.1) rotate(-#{$progress});
-    }
-
+@mixin circular-progress($percent,$skill,$color,$bgcolor){
+  $progress: progress($percent);
+  background: linear-gradient(
+               0deg,
+               $color 50%,
+               rgba($color, .2) 50%
+  );
+  transform: rotate($progress);
+  
+  &:before,
+  &:after {
+     color: $color;
+  }
+  
+  &:before {
+    content: "#{$skill}";
+    background: $bgcolor content-box;
+    transform: rotate(-#{$progress});
+    text-transform: uppercase;
+  }
+  
+  &:after {
+    content: "#{$percent}%";
+    background: linear-gradient(
+                transparent 50%,
+                $bgcolor 50%
+    );
+    transform: scale(1.1)  rotate(-#{$progress});
+  }
 }

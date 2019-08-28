@@ -1,0 +1,68 @@
+.html{
+    @include circular-progress(
+      80,
+      HTML5,
+      #e85d25,
+      $pantalla-azul
+    );
+  }
+  
+  .css{
+    @include circular-progress(
+      80,
+      CSS,
+      #249cda,
+     $pantalla-azul
+    );
+  }
+
+  .js{
+    @include circular-progress(
+      80,
+      JS,
+      #f7e018,
+     $pantalla-azul
+    );
+  }
+
+  .nodejs{
+    @include circular-progress(
+      75,
+      NODEJS,
+      #026e00,
+     $pantalla-azul
+    );
+  }
+  .php{
+    @include circular-progress(
+      60,
+      PHP,
+    rgb(0, 119, 255),
+     $pantalla-azul
+    );
+  }
+  .java{
+    @include circular-progress(
+      75,
+      JAVA SE,
+      #f60002,
+     $pantalla-azul
+    );
+  }
+  .mongo{
+    @include circular-progress(
+      75,
+      MONGO,
+      #116149,
+     $pantalla-azul
+    );
+  }
+  .mysql{
+    @include circular-progress(
+      80,
+      MYSQL,
+      #4479a1,
+     $pantalla-azul
+    );
+  }
+
