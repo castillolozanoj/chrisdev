@@ -1,14 +1,16 @@
 @media screen and (min-width: 769px) {
     .menu {
       display: flex !important;
+      li {
+        text-align: center;
+        flex: auto;
+      }
+      a {
+        padding-left: 0;
+      }
     }
-    li {
-      text-align: center;
-      flex: auto;
-    }
-    a {
-      padding-left: 0;
-    }
+    
+   
     #toggle-menu {
       display: none;
     }

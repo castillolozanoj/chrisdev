@@ -4,8 +4,8 @@
   &,
   &:before,
   &:after {
-     width: 12rem;
-     height: 12rem;
+     width: 15rem;
+     height: 15rem;
      border-radius: 50%;
   }
   
@@ -18,14 +18,15 @@
   }
   
   &:before {
-    line-height: 8rem;
+    line-height: 12rem;
     padding: .5em;
     box-sizing: border-box;
     font-size: 1.8rem;
   }
   
   &:after {
-    line-height: 13rem;
+    font-size: 1.5rem;
+    line-height: 17rem;
   }
 
 }
@@ -50,7 +51,7 @@
   }
   
   &:before {
-    content: "#{$skill}";
+    content: url(#{$skill});
     background: $bgcolor content-box;
     transform: rotate(-#{$progress});
     text-transform: uppercase;

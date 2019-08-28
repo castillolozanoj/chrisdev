@@ -1,7 +1,15 @@
+$html: "https://img.icons8.com/color/96/000000/html-5.png";
+$css: "https://img.icons8.com/color/96/000000/css3.png";
+$js: "https://img.icons8.com/color/96/000000/javascript.png";
+$nodejs: "https://img.icons8.com/color/96/000000/nodejs.png";
+$php: "https://img.icons8.com/officel/80/000000/php-logo.png";
+$java: "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png";
+$mongo:  "https://img.icons8.com/color/96/000000/mongodb.png";
+$mysql:   "https://img.icons8.com/ios/100/000000/mysql-logo.png";
 .html{
     @include circular-progress(
       80,
-      HTML5,
+      $html,
       #e85d25,
       $pantalla-azul
     );
@@ -10,7 +18,7 @@
   .css{
     @include circular-progress(
       80,
-      CSS,
+      $css,
       #249cda,
      $pantalla-azul
     );
@@ -18,8 +26,8 @@
 
   .js{
     @include circular-progress(
-      80,
-      JS,
+      70,
+      $js,
       #f7e018,
      $pantalla-azul
     );
@@ -28,7 +36,7 @@
   .nodejs{
     @include circular-progress(
       75,
-      NODEJS,
+      $nodejs,
       #026e00,
      $pantalla-azul
     );
@@ -36,7 +44,7 @@
   .php{
     @include circular-progress(
       60,
-      PHP,
+      $php,
     rgb(0, 119, 255),
      $pantalla-azul
     );
@@ -44,7 +52,7 @@
   .java{
     @include circular-progress(
       75,
-      JAVA SE,
+      $java,
       #f60002,
      $pantalla-azul
     );
@@ -52,15 +60,15 @@
   .mongo{
     @include circular-progress(
       75,
-      MONGO,
+      $mongo,
       #116149,
      $pantalla-azul
     );
   }
   .mysql{
     @include circular-progress(
-      80,
-      MYSQL,
+      70,
+      $mysql,
       #4479a1,
      $pantalla-azul
     );
