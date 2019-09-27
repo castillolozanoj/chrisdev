@@ -2,10 +2,10 @@ $html: "https://img.icons8.com/color/96/000000/html-5.png";
 $css: "https://img.icons8.com/color/96/000000/css3.png";
 $js: "https://img.icons8.com/color/96/000000/javascript.png";
 $nodejs: "https://img.icons8.com/color/96/000000/nodejs.png";
-$php: "https://img.icons8.com/officel/80/000000/php-logo.png";
+$expressjs: "https://vladmrnv.gallerycdn.vsassets.io/extensions/vladmrnv/expresssnippet/0.2.4/1528939685286/Microsoft.VisualStudio.Services.Icons.Default";
 $java: "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png";
 $mongo:  "https://img.icons8.com/color/96/000000/mongodb.png";
-$mysql:   "https://img.icons8.com/ios/100/000000/mysql-logo.png";
+$react:   "https://img.icons8.com/color/96/000000/react-native.png";
 .html{
     @include circular-progress(
       80,
@@ -26,7 +26,7 @@ $mysql:   "https://img.icons8.com/ios/100/000000/mysql-logo.png";
 
   .js{
     @include circular-progress(
-      70,
+      75,
       $js,
       #f7e018,
      $pantalla-azul
@@ -41,11 +41,11 @@ $mysql:   "https://img.icons8.com/ios/100/000000/mysql-logo.png";
      $pantalla-azul
     );
   }
-  .php{
+  .expressjs{
     @include circular-progress(
-      60,
-      $php,
-    rgb(0, 119, 255),
+      85,
+      $expressjs,
+    #111,
      $pantalla-azul
     );
   }
@@ -65,11 +65,11 @@ $mysql:   "https://img.icons8.com/ios/100/000000/mysql-logo.png";
      $pantalla-azul
     );
   }
-  .mysql{
+  .react{
     @include circular-progress(
-      70,
-      $mysql,
-      #4479a1,
+      30,
+      $react,
+      #2196f3 ,
      $pantalla-azul
     );
   }
