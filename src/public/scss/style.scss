@@ -11,12 +11,17 @@
 @import "components/media_max1400";
 @import "components/paint-circle";
 @import "components/footer.scss";
+@import "components/form.scss";
+@import "components/alert.scss";
 
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: Lato,sans-serif;
+  
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .menu {
@@ -69,7 +74,7 @@ section {
 }
 
 .container {
- 
+ height: 100%;
   margin: auto;
   overflow: hidden;
   padding: 1rem 1rem;
@@ -90,6 +95,33 @@ section {
   z-index: 2;
 }
 
+.menu_footer {
+  align-content: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: transparent;
+  display: flex;
+  li {
+    flex-basis: 10rem;
+    text-align: center;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    line-height: 4.5;
+   
+
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+}
+
+
+
 
 
 @media screen and (max-width: 768px) {
@@ -109,7 +141,8 @@ section {
   .grid-2,
   .grid-4,
   .grid-3,
-  .grid-1 {
+  .grid-1,
+  .grid-form {
     height: 100% !important;
     grid-template-columns: 1fr !important;
     grid-template-rows: 1fr !important;
@@ -123,9 +156,14 @@ section {
   }
 
   .title {
-    padding-top: 3rem;
+    padding-top: 0rem;
     font-size: 20px;
   }
+
+  .sub-title {
+    font-size: .8rem;
+    color: #8e8e8e;
+}
   .grid-fotos {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,11 +176,42 @@ section {
 
   .c-1,
   .c-2,
-  .col-one{
+  .col-one,
+  form{
     grid-column: 1;
   }
   .nocellphone{
     display: none;
   }
+
+ form{
+  width: 17rem;
+ }
+ .mt-1{
+  margin-top: 1em;
+}
+
+label{
+  display: flex;
+    width: 8rem;
+    text-align: left !important;
+}
+input,
+textarea{
+    width: 15rem;
+    height: 2.5em;   
+}
+
+.form-txt {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.btn-right{
+  margin: 0px 0px .3em 4.3em !important;
+}
+.mybtn{
+  font-size: 1.2rem;
+}
 
 }

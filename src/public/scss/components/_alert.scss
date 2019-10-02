@@ -1,0 +1,27 @@
+
+
+.alert .inner {
+    display: block;
+    padding: 6px;
+    margin: 6px;
+    border-radius: 3px;
+    border: 4px solid rgb(180,180,180);
+    background-color: rgb(212,212,212);
+  }
+  
+
+  
+
+  
+  .alert.error .inner {
+    border: 3px solid rgb(238,211,215);
+    background-color: rgb(242,222,222);
+  }
+  
+  .alert.error .inner,.alert.error .close {
+    color: rgb(185,74,72);
+  }
+
+
+
+  

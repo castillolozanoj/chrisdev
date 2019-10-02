@@ -5,9 +5,14 @@ const exphbs = require ('express-handlebars');
 const morgan = require ('morgan');
 const favicon = require('serve-favicon');
 const helmet = require ('helmet');
-var http = require('http').createServer(app);;
-var express_enforces_ssl = require('express-enforces-ssl');
+const http = require('http').createServer(app);;
+const express_enforces_ssl = require('express-enforces-ssl');
 const hostValidation = require('host-validation');
+
+
+
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());  
 
 
 
@@ -31,13 +36,14 @@ app.use(morgan('dev'));
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use(hostValidation({ hosts: ['127.0.0.1:8080',
                                  `localhost:${app.get('port')}`,
-                                 '7264175a.ngrok.io', 
-                                 /.*\.chrisweb\.me$/] }))
+                                 '2efa0aef.ngrok.io', 
+                                 /.*\.chrisweb\.me$/] }));
 
-  
+
+                                 
 
 //routes
-app.use(require('./routes/index'));
+app.use(require('./routes/index.routes'));
 
 
 //statics files

@@ -1,0 +1,27 @@
+<div class="container ">
+   {{>error}}
+    <p class="title-dos text-center">contacto </p>
+    <form action="/aboutMe" method="POST">
+        <div class="mt-1 ">
+            <label class="form-txt" for="name">Nombre :</label>
+            <input class="text-center" type="text" name="name" placeholder="Nombre Completo" required>
+        </div>
+        <div class="mt-1">
+            <label class="form-txt" for="email">Email :</label>
+            <input class="text-center" type="email" name="email" placeholder="ejemplo. jesus@gmail.com" required>
+        </div>
+
+        <div class="mt-1">
+            <label class="form-txt" for="msg">Mensage :</label>
+            <textarea class="text-center" name="msg" cols="30" rows="2"
+                placeholder="Comentarios, dudas o sugerencias"></textarea>
+        </div>
+        <div class="mt-1">
+            <button class="mybtn btn-right" type="submit">
+                Enviar
+            </button>
+        </div>
+
+
+    </form>
+</div>

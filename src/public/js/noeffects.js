@@ -13,6 +13,8 @@ $(document).ready(function(){
       "height": "3.5rem"
     });
 
+  $('#message').alert('hola'); 
+
 });
   
 

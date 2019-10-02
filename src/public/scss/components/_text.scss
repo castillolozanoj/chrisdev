@@ -8,8 +8,14 @@ $negrita: bold;
 
 .title-dos {
   font-weight: $negrita;
-  padding: 3rem;
+  padding: 1rem 0 2.5rem 0;
   font-size: 4rem;
+}
+.sub-title {
+  padding: 0;
+  font-size: 1rem;
+  color: #8e8e8e;
+
 }
 
 .sub-title-dos {
@@ -22,6 +28,11 @@ $negrita: bold;
   text-align: left;
   margin: auto;
   font-size: 1.3rem;
+}
+
+.form-txt {
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 .text-center {
@@ -42,3 +53,4 @@ $negrita: bold;
 .pt-4{
   padding-top: 4rem;
 }
+

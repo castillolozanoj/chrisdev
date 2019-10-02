@@ -1,0 +1,39 @@
+
+form{
+    margin: 0 auto 4rem;
+    width: 60rem;
+    padding: 1em;
+    border: 1px solid #39b5ff;
+    border-radius: 2em;
+    box-shadow: 0 0 25px 3px #FFFFFF;
+  }
+  
+  .mt-1{
+    margin-top: 2em;
+  }
+
+  label{
+    display: inline-flex;
+      width: 10rem;
+      text-align: right;
+  }
+
+  input,
+  textarea{
+      width: 40rem;
+      height: 2.5em;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #39b5ff;
+  }
+
+  input:focus, textarea:focus {
+    border-color: rgb(88, 88, 88);
+}
+
+textarea{
+    vertical-align: top;
+    height: 7em;
+    resize: vertical;
+}
+
