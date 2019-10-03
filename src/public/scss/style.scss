@@ -74,7 +74,6 @@ section {
 }
 
 .container {
-
   margin: auto;
   overflow: hidden;
   padding: 1rem 1rem;
@@ -87,6 +86,7 @@ section {
   padding: 1rem 1rem;
   align-content: center;
   justify-content: center;
+  
   a{
     text-decoration: none;
   }
@@ -122,16 +122,11 @@ section {
     color: #000;
     text-decoration: none;
     line-height: 4.5;
-   
-
     font-size: 1em;
     font-weight: bold;
   }
 
 }
-
-
-
 
 
 @media screen and (max-width: 768px) {
