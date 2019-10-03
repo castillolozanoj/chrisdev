@@ -74,12 +74,22 @@ section {
 }
 
 .container {
- height: 100%;
+
   margin: auto;
   overflow: hidden;
   padding: 1rem 1rem;
   align-content: center;
   justify-content: center;
+}
+.container-special {
+  margin: inherit;
+  overflow: hidden;
+  padding: 1rem 1rem;
+  align-content: center;
+  justify-content: center;
+  a{
+    text-decoration: none;
+  }
 }
 
 
@@ -158,6 +168,10 @@ section {
   .title {
     padding-top: 0rem;
     font-size: 20px;
+  }
+  .text-left{
+    text-align: center;
+    margin: auto;
   }
 
   .sub-title {

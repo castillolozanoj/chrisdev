@@ -14,6 +14,12 @@
   clip-path:  polygon(25% 10%, 75% 10%, 100% 50%, 75% 90%, 25% 90%, 0% 50%);
 }
 
+.logo1{
+  max-width:  350px;
+  height: 15rem;
+  border-radius: 2%;
+}
+
 .item {
   display: flex;
   align-items: center;
@@ -96,10 +102,12 @@
     
     transition: 0.8s ease;
     border-radius: 10px;
+  
   }
   &:hover img {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+   
   }
 
   .car-body {

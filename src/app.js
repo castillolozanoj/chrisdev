@@ -18,7 +18,7 @@ app.use(express.json());
 
 
 //settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({
     layoutsDir : path.join(app.get('views'), 'layouts'),

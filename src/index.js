@@ -1,3 +1,4 @@
+require ('dotenv').config();
 const {app, http} = require ('./app.js');
 
 async function main(){

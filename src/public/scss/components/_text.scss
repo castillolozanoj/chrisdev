@@ -11,6 +11,10 @@ $negrita: bold;
   padding: 1rem 0 2.5rem 0;
   font-size: 4rem;
 }
+.title-tres {
+  font-size: 2rem;
+  padding: 3rem 2rem 1rem 2rem;
+}
 .sub-title {
   padding: 0;
   font-size: 1rem;
@@ -21,6 +25,12 @@ $negrita: bold;
 .sub-title-dos {
   padding: 1rem;
   font-size: 2rem;
+}
+.sub-title-tres {
+  padding: 0 0 0 8rem;
+  font-size: 1rem;
+  color: #8e8e8e;
+
 }
 
 .tx {
@@ -37,6 +47,16 @@ $negrita: bold;
 
 .text-center {
   text-align: center;
+  margin: auto;
+}
+
+.text-right{
+  text-align: right;
+  margin: auto;
+}
+
+.text-left{
+  text-align: left;
   margin: auto;
 }
 .pt-1{

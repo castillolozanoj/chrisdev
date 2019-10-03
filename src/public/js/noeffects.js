@@ -12,9 +12,6 @@ $(document).ready(function(){
       "width": "3.5rem",
       "height": "3.5rem"
     });
-
-  $('#message').alert('hola'); 
-
 });
   
 

@@ -5,3 +5,22 @@
         </p>
     </div>
     {{/each}}
+
+
+ {{#if success_msg}}
+<div class="alert suss">
+        <p class="inner">
+            <strong role="alert">{{success_msg}}</strong> 
+        </p>
+    </div>
+
+ {{/if}}
+
+  {{#if error_msg}}
+<div class="alert error">
+        <p class="inner">
+            <strong role="alert">{{error_msg}}</strong> 
+        </p>
+    </div>
+
+ {{/if}}
