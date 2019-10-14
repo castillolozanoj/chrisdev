@@ -1,27 +1,23 @@
 @media screen and (min-width: 769px) {
-    .menu {
-      display: flex !important;
-      li {
-        text-align: center;
-        flex: auto;
-      }
-      a {
-        padding-left: 0;
-      }
+  .menu {
+    display: flex !important;
+    li {
+      text-align: center;
+      flex: auto;
     }
-    
-   
-    #toggle-menu {
-      display: none;
+    a {
+      padding-left: 0;
     }
-  
-    .hamburguer-bt {
-      display: none;
-    }
-    .hidden_log{
-      display: none;
-    }  
-  
   }
 
-    
+  #toggle-menu {
+    display: none;
+  }
+
+  .hamburguer-bt {
+    display: none;
+  }
+  .hidden_log {
+    display: none;
+  }
+}

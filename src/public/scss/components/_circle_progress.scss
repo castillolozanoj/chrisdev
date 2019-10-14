@@ -4,65 +4,57 @@
   &,
   &:before,
   &:after {
-     width: 15rem;
-     height: 15rem;
-     border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
   }
-  
+
   &:before,
   &:after {
-     position: absolute;
-     top: 0;
-     left: 0;
-     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
   }
-  
+
   &:before {
     line-height: 12rem;
-    padding: .5em;
+    padding: 0.5em;
     box-sizing: border-box;
     font-size: 1.8rem;
   }
-  
+
   &:after {
     font-size: 1.5rem;
     line-height: 17rem;
   }
-
 }
 
-@function progress ($percent){
+@function progress($percent) {
   $deg: $percent/100 * 180;
   @return #{$deg}deg;
 }
 
-@mixin circular-progress($percent,$skill,$color,$bgcolor){
+@mixin circular-progress($percent, $skill, $color, $bgcolor) {
   $progress: progress($percent);
-  background: linear-gradient(
-               0deg,
-               $color 50%,
-               rgba($color, .2) 50%
-  );
+  background: linear-gradient(0deg, $color 50%, rgba($color, 0.2) 50%);
   transform: rotate($progress);
-  
+
   &:before,
   &:after {
-     color: $color;
+    color: $color;
   }
-  
+
   &:before {
     content: url(#{$skill});
     background: $bgcolor content-box;
     transform: rotate(-#{$progress});
     text-transform: uppercase;
   }
-  
+
   &:after {
     content: "#{$percent}%";
-    background: linear-gradient(
-                transparent 50%,
-                $bgcolor 50%
-    );
-    transform: scale(1.1)  rotate(-#{$progress});
+    background: linear-gradient(transparent 50%, $bgcolor 50%);
+    transform: scale(1.1) rotate(-#{$progress});
   }
 }

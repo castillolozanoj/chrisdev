@@ -4,73 +4,32 @@ $js: "https://img.icons8.com/color/96/000000/javascript.png";
 $nodejs: "https://img.icons8.com/color/96/000000/nodejs.png";
 $expressjs: "https://vladmrnv.gallerycdn.vsassets.io/extensions/vladmrnv/expresssnippet/0.2.4/1528939685286/Microsoft.VisualStudio.Services.Icons.Default";
 $java: "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png";
-$mongo:  "https://img.icons8.com/color/96/000000/mongodb.png";
-$react:   "https://img.icons8.com/color/96/000000/react-native.png";
-.html{
-    @include circular-progress(
-      80,
-      $html,
-      #e85d25,
-      $pantalla-azul
-    );
-  }
-  
-  .css{
-    @include circular-progress(
-      80,
-      $css,
-      #249cda,
-     $pantalla-azul
-    );
-  }
+$mongo: "https://img.icons8.com/color/96/000000/mongodb.png";
+$react: "https://img.icons8.com/color/96/000000/react-native.png";
+.html {
+  @include circular-progress(80, $html, #e85d25, $azul);
+}
 
-  .js{
-    @include circular-progress(
-      75,
-      $js,
-      #f7e018,
-     $pantalla-azul
-    );
-  }
+.css {
+  @include circular-progress(80, $css, #249cda, $azul);
+}
 
-  .nodejs{
-    @include circular-progress(
-      75,
-      $nodejs,
-      #026e00,
-     $pantalla-azul
-    );
-  }
-  .expressjs{
-    @include circular-progress(
-      85,
-      $expressjs,
-    #111,
-     $pantalla-azul
-    );
-  }
-  .java{
-    @include circular-progress(
-      75,
-      $java,
-      #f60002,
-     $pantalla-azul
-    );
-  }
-  .mongo{
-    @include circular-progress(
-      75,
-      $mongo,
-      #116149,
-     $pantalla-azul
-    );
-  }
-  .react{
-    @include circular-progress(
-      30,
-      $react,
-      #2196f3 ,
-     $pantalla-azul
-    );
-  }
+.js {
+  @include circular-progress(75, $js, #f7e018, $azul);
+}
 
+.nodejs {
+  @include circular-progress(75, $nodejs, #026e00, $azul);
+}
+.expressjs {
+  @include circular-progress(85, $expressjs, #111, $azul);
+}
+.java {
+  @include circular-progress(75, $java, #f60002, $azul);
+}
+.mongo {
+  @include circular-progress(75, $mongo, #116149, $azul);
+}
+.react {
+  @include circular-progress(30, $react, #2196f3, $azul);
+}

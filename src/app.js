@@ -36,7 +36,7 @@ app.use(morgan('dev'));
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')));
 app.use(hostValidation({ hosts: ['127.0.0.1:8080',
                                  `localhost:${app.get('port')}`,
-                                 '2efa0aef.ngrok.io', 
+                                 'd4ae39b2.ngrok.io', 
                                  /.*\.chrisweb\.me$/] }));
 
 
