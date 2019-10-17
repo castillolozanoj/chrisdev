@@ -36,6 +36,7 @@ app.use(
     hosts: [
       "127.0.0.1:8080",
       `localhost:${app.get("port")}`,
+      "chrisweb.herokuapp.com/",
       "chrisweb.me",
       /.*\.chrisweb\.me$/
     ]
