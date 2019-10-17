@@ -27,11 +27,20 @@ app.set("view engine", "handlebars");
 
 //middleware
 app.enable("trust proxy");
-app.use(express_enforces_ssl());
+//app.use(express_enforces_ssl());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(favicon(path.join(__dirname, "public/img", "favicon.ico")));
-app.use(hostValidation({ hosts: ["chrisweb.me", /.*\.chrisweb\.me$/] }));
+app.use(
+  hostValidation({
+    hosts: [
+      "127.0.0.1:8080",
+      `localhost:${app.get("port")}`,
+      "chrisweb.me",
+      /.*\.chrisweb\.me$/
+    ]
+  })
+);
 
 //routes
 app.use(require("./routes/index.routes"));
