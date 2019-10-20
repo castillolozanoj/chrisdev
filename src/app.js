@@ -34,7 +34,7 @@ app.use(favicon(path.join(__dirname, "public/img", "favicon.ico")));
 app.use(
   hostValidation({
     hosts: [
-      "127.0.0.1:8080",
+      "127.0.0.1:3000",
       `localhost:${app.get("port")}`,
       "chrisweb.herokuapp.com",
       /.*\.chrisweb\.herokuapp\.com$/

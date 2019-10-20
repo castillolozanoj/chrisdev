@@ -1,0 +1,19 @@
+@import "colors";
+
+.bg-uno {
+  background-image: linear-gradient($bg-opacity, $bg-opacity),
+    url(../img/3.webp);
+}
+
+.bg-dos {
+  background: $pantalla-azul;
+}
+
+.bg-tres {
+  background-image: linear-gradient($bg-opacity, $bg-opacity),
+    url(../img/rocket.webp);
+}
+
+.bg-cuatro {
+  background: $azul;
+}
