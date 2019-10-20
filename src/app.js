@@ -27,7 +27,7 @@ app.set("view engine", "handlebars");
 
 //middleware
 app.enable("trust proxy");
-//app.use(express_enforces_ssl());
+app.use(express_enforces_ssl());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(favicon(path.join(__dirname, "public/img", "favicon.ico")));
