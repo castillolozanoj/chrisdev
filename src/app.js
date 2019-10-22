@@ -37,9 +37,7 @@ app.use(
       "127.0.0.1:3000",
       `localhost:${app.get("port")}`,
       "chrisweb.herokuapp.com",
-      "focused-roentgen-861d79.netlify.com",
-      /.*\.chrisweb\.herokuapp\.com$/,
-      /.*\.focused-roentgen-861d79\.netlify\.com$/
+      /.*\.chrisweb\.herokuapp\.com$/
     ]
   })
 );
