@@ -13,6 +13,12 @@ $(document).ready(function() {
  
 scrollLogo(window);
 
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+
+gtag('config', 'UA-150948906-1');
+
 
 });
 
