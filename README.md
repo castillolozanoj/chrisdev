@@ -1,3 +1,3 @@
 ### Chris web
 
-[![Web|Christian](https://cldup.com/dTxpPi9lDf.thumb.png)](https://chrisweb.herokuapp.com)
+[![Web|Christian](https://chrisweb.me/img/logo_chris.webp)](https://chrisweb.me)
