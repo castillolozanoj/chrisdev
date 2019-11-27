@@ -17,9 +17,7 @@ const Val = [
 ];
 
 route.get("/", (req, res) => {
-  res.render("index", {
-    title: "Christian Castillo DevWeb"
-  });
+  res.render("index");
 });
 
 route.get("/projects", (req, res) => {
