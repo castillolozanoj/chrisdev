@@ -17,7 +17,12 @@ const Val = [
 ];
 
 route.get("/", (req, res) => {
-  res.render("index");
+  res.locals.metaTags = { 
+    title: "Christian Castillo DevWeb", 
+    description: "Personal website jesus christian castillo upvm developer node.js desarrolloweb web",   
+    keywords: "JesusChristian christian castillo upvm developweb web developer chrisweb node.js" 
+}; 
+  res.render("index", { layout: "main" });
 });
 
 route.get("/projects", (req, res) => {
