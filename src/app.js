@@ -37,6 +37,7 @@ app.use(
       "127.0.0.1:3000",
       `localhost:${app.get("port")}`,
       "chrisweb.me",
+      "www.chrisweb.me",
       /.*\.chrisweb\.me$/
     ]
   })
