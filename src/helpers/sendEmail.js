@@ -21,7 +21,7 @@ Vl.Send = async (name, email, msg) => {
               <h3 style="text-align: center;"> ${msg} </h3><br>
               <hr style="color: #0056b2;" />
               <br>
-             <p style="text-align: center;">© 2019 Copyright: chrisweb.me </p> `
+             <p style="text-align: center;">© 2020 Copyright: www.chrisweb.me </p> `
   };
 
   const sm = await transporter.sendMail(mailOptions);
