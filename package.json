@@ -17,12 +17,12 @@
     "express-enforces-ssl": "^1.1.0",
     "express-handlebars": "^3.1.0",
     "express-recaptcha": "^5.0.1",
-    "express-validator": "^6.3.1",
-    "helmet": "^3.21.2",
+    "express-validator": "^6.4.0",
+    "helmet": "^3.21.3",
     "host-validation": "^2.0.1",
     "morgan": "^1.9.1",
-    "nodemailer": "^6.4.2",
-    "npm-check-updates": "^4.0.1",
+    "nodemailer": "^6.4.5",
+    "rollbar": "^2.15.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {

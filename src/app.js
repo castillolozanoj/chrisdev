@@ -62,4 +62,15 @@ app.use(function(err, req, res, next) {
   res.status(500).sendFile(path.join(__dirname, "public", "500.html"));
 });
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR,
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+// record a generic message and send it to Rollbar
+rollbar.log("Hello world!");
+
 module.exports = { app, http };
