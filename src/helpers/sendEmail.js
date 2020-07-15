@@ -17,7 +17,7 @@ Vl.Send = async (name, email, msg) => {
     text: `Tienes un nuevo comentario `,
     html: `<center><img src="https://img.icons8.com/nolan/128/000000/robot-2.png"></center>
               <h2 style="text-align: center;">Tienes un nuevo mensaje de ${name}</h2> <br>
-              <h2 style="text-align: center;">Correo electronico ${email}</h2> <br>
+              <h2 style="text-align: center;">Correo electrónico ${email}</h2> <br>
               <h3 style="text-align: center;"> ${msg} </h3><br>
               <hr style="color: #0056b2;" />
               <br>

@@ -1,7 +1,7 @@
 require ('dotenv').config();
 const {app, http} = require ('./app.js');
 
-async function main(){
+async function Main(){
 
     try {
    await http.listen(app.get('port'));
@@ -14,4 +14,4 @@ async function main(){
 };
 
 
-main();
+Main();

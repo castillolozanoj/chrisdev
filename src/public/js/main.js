@@ -19,7 +19,6 @@ gtag('js', new Date());
 
 gtag('config', 'UA-150948906-1');
 
-
 });
 
 
