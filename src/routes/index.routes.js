@@ -33,12 +33,12 @@ route.get("/aboutMe", recaptcha.middleware.render, (req, res) => {
   res.render("templates/profile");
 });
 
-route.post("/aboutMe", recaptcha.middleware.verify, Val, async (req, res) => {
+route.post("/aboutMe", recaptcha.middleware.verify, Val, (req, res) => {
   if (!req.recaptcha.error) {
     try {
       validationResult(req).throw();
       const { name, email, msg } = req.body;
-      await Send(name, email, msg);
+      Send(name, email, msg);
       res.render("templates/profile", {
         success_msg: "Email enviado correctamente, Gracias."
       });
