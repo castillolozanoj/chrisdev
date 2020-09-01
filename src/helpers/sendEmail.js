@@ -14,7 +14,7 @@ Vl.Send = async (name, email, msg) => {
 
   const mailOptions = {
     to: "christian.castillo.lozano@gmail.com",
-    from: email,
+    from: "jesuschris.castillo@gmail.com",
     subject: "Comentarios del Portal ChrisWeb",
     html: `<center><img src="https://img.icons8.com/nolan/128/000000/robot-2.png"></center>
     <h2 style="text-align: center;">Tienes un nuevo mensaje de ${name}</h2> <br>
