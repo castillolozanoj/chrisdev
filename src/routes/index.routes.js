@@ -18,7 +18,7 @@ const Val = [
 
 route.get("/", (req, res) => {
   res.locals.metaTags = { 
-    title: "Desarrollo Web", 
+    title: "Desarrollo Web Jr", 
     description: "Sitio Web Personal www.chrisweb.me",   
     keywords: "Jesus Christian Castillo Desarrollo web UPVM " 
 }; 

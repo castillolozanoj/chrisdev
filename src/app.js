@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const favicon = require("serve-favicon");
 const helmet = require("helmet");
 const http = require("http").createServer(app);
-const express_enforces_ssl = require("express-enforces-ssl");
+//const express_enforces_ssl = require("express-enforces-ssl");
 const hostValidation = require("host-validation");
 
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +27,7 @@ app.set("view engine", "handlebars");
 
 //middleware
 app.enable("trust proxy");
-app.use(express_enforces_ssl());
+//app.use(express_enforces_ssl());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(favicon(path.join(__dirname, "public/img", "favicon.ico")));
@@ -36,9 +36,9 @@ app.use(
     hosts: [
       "127.0.0.1:3000",
       `localhost:${app.get("port")}`,
-      "chrisweb.me",
-      "www.chrisweb.me",
-      /.*\.chrisweb\.me$/
+      "chrisweb.digital",
+      "www.chrisweb.digital",
+      /.*\.chrisweb\.digital$/
     ]
   })
 );
