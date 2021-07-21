@@ -37,8 +37,7 @@ app.use(
 				   styleSrc:["'self'",'maxcdn.bootstrapcdn.com'],
 				   fontSrc:["'self'",'maxcdn.bootstrapcdn.com'],
            imgSrc:["'self'", 'img.icons8.com', 'ih1.redbubble.net', 'www.gstatic.com'],
-           frameSrc: ["'self'", "https://www.google.com"],
-           objectSrc:["'self'",'none']
+           frameSrc: ["'self'", "https://www.google.com"]
           }
       },
   })
