@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const favicon = require("serve-favicon");
 const helmet = require("helmet");
 const http = require("http").createServer(app);
-const express_enforces_ssl = require("express-enforces-ssl");
+//const express_enforces_ssl = require("express-enforces-ssl");
 const hostValidation = require("host-validation");
 
 app.use(express.urlencoded({ extended: false }));
@@ -26,15 +26,28 @@ app.engine(
 app.set("view engine", "handlebars");
 
 //middleware
-app.enable("trust proxy");
-app.use(express_enforces_ssl());
-app.use(helmet());
+//app.enable("trust proxy");
+//app.use(express_enforces_ssl());
+app.use(
+  helmet({
+      contentSecurityPolicy: {
+          directives: {
+           defaultSrc:["'self'"],
+				   scriptSrc:["'self'",'code.jquery.com','maxcdn.bootstrapcdn.com','google.com/recaptcha', 'googletagmanager.com'],
+				   styleSrc:["'self'",'maxcdn.bootstrapcdn.com'],
+				   fontSrc:["'self'",'maxcdn.bootstrapcdn.com'],
+           imgSrc:["'self'", 'img.icons8.com', 'ih1.redbubble.net'],
+           frameSrc: ["'self'", "https://www.google.com"]
+          }
+      },
+  })
+);
 app.use(morgan("dev"));
 app.use(favicon(path.join(__dirname, "public/img", "favicon.ico")));
 app.use(
   hostValidation({
     hosts: [
-      "127.0.0.1:3000",
+      "127.0.0.1:8080",
       `localhost:${app.get("port")}`,
       "chrisweb.digital",
       "www.chrisweb.digital",

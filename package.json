@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "sass": "node-sass -w --output-style compressed src/public/scss -o src/public/css"
+    "sass": "node-sass  src/public/scss -o src/public/css --output-style compressed"
+    
   },
   "author": "jesus christian castillo lozano",
   "license": "ISC",
