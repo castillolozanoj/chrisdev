@@ -33,11 +33,11 @@ app.use(
       contentSecurityPolicy: {
           directives: {
            defaultSrc:["'self'"],
-				   scriptSrc:["'self'", 'nonce-{NONCE}','code.jquery.com','maxcdn.bootstrapcdn.com','google.com/recaptcha', 'googletagmanager.com'],
+				   scriptSrc:["'self'",'code.jquery.com','maxcdn.bootstrapcdn.com','https://www.gstatic.com/recaptcha/', 'googletagmanager.com','https://www.google.com/recaptcha/'],
 				   styleSrc:["'self'",'maxcdn.bootstrapcdn.com'],
 				   fontSrc:["'self'",'maxcdn.bootstrapcdn.com'],
-           imgSrc:["'self'", 'img.icons8.com', 'ih1.redbubble.net', 'www.gstatic.com'],
-           frameSrc: ["'self'", "https://www.google.com"]
+           imgSrc:["'self'", 'img.icons8.com', 'ih1.redbubble.net'],
+           frameSrc: ["'self'", "https://www.google.com", 'https://recaptcha.google.com/recaptcha/','https://www.google.com/recaptcha/']
           }
       },
   })
