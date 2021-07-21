@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const favicon = require("serve-favicon");
 const helmet = require("helmet");
 const http = require("http").createServer(app);
-//const express_enforces_ssl = require("express-enforces-ssl");
+const express_enforces_ssl = require("express-enforces-ssl");
 const hostValidation = require("host-validation");
 
 app.use(express.urlencoded({ extended: false }));
@@ -26,8 +26,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 //middleware
-//app.enable("trust proxy");
-//app.use(express_enforces_ssl());
+app.enable("trust proxy");
+app.use(express_enforces_ssl());
 app.use(
   helmet({
       contentSecurityPolicy: {
