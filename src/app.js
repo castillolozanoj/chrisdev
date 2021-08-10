@@ -49,9 +49,9 @@ app.use(
     hosts: [
       "127.0.0.1:8080",
       `localhost:${app.get("port")}`,
-      "chrisweb.digital",
-      "www.chrisweb.digital",
-      /.*\.chrisweb\.digital$/
+      "chrisweb.tech",
+      "www.chrisweb.tech",
+      /.*\.chrisweb\.tech$/
     ]
   })
 );
