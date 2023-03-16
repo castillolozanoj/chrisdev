@@ -6,11 +6,11 @@ $(document).ready(function(){
           .slideToggle();
       });
 
-    $(".menu").css({ "background-color": "#fff" });
+    $(".menu").css({ "background-color": "#f2f3f4" });
     $(".myimg").css({
       "margin-top": ".3rem",
-      "width": "3.5rem",
-      "height": "3.5rem"
+      "width": "30rem",
+      "height": "4rem"
     });
 });
   

@@ -2,7 +2,7 @@
 
 .bg-uno {
   background-image: linear-gradient($bg-opacity, $bg-opacity),
-    url(../img/3.webp);
+    url(../img/C.webp);
 }
 
 .bg-dos {
@@ -16,4 +16,8 @@
 
 .bg-cuatro {
   background: $azul;
+}
+
+.bg-cinco {
+  background: $cereza-opacity;
 }

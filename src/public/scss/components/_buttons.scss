@@ -1,22 +1,24 @@
-.mybtn {
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #000;
-  margin: 0 0.3em 0.3em 0;
-  font-size: 1.5rem;
-  width: auto;
-  border-radius: 15em;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-  transition: all 0.2s;
-  cursor: pointer;
-  &:hover {
-    color: #000;
-    background: $nav_hover;
-  }
-}
+@import "colors";
+
+// .mybtn {
+//   display: inline-block;
+//   padding: 0.35em 1.2em;
+//   border: 0.1em solid #000;
+//   margin: 0 0.3em 0.3em 0;
+//   font-size: 1.5rem;
+//   width: auto;
+//   border-radius: 15em;
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   color: #000;
+//   text-align: center;
+//   transition: all 0.2s;
+//   cursor: pointer;
+//   &:hover {
+//     color: #000;
+//     background: $gris-alphine;
+//   }
+// }
 
 .formBtn {
   padding-left: 90px;
@@ -30,3 +32,22 @@
 .btn-center {
   display: inline-block;
 }
+
+.mybtn {
+  background-color: $azul;
+  color: #000000;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px $azul;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #000000;
+    color: $azul;
+    box-shadow: 0 0 20px $azul;
+  }
+}
+
+
