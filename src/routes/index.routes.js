@@ -26,7 +26,28 @@ route.get("/start", (req, res) => {
 });
 
 route.get("/projects", (req, res) => {
-  res.render("templates/projects");
+  res.render("templates/projects",{
+    projects : [
+      { id:'001',
+        name: "Robooba 1", 
+        description:'Control de 17 Servo motores via Wifi en tiempo real', 
+        ref: 'https://github.com/jesus-khristian/Robonova1-nodeJS-Johnny-five-Arduino',
+        nameImg:'robonova1.webp'      
+      },
+      { id:'002',
+        name: "Sensation LED", 
+        description:'Iluminación Inteligente IoT',
+        ref: 'https://sensationled.herokuapp.com',
+        nameImg: 'sled310.webp'  
+      },
+      { id:'003',
+        name: "Wifi Car", 
+        description:'Control de un carrito via LAN en tiempo real',
+        ref: 'https://wificar.herokuapp.com',
+        nameImg: 'car.webp'  
+      },
+    ]
+  });
 });
 
 // route.get("/aboutMe", recaptcha.middleware.render, (req, res) => {

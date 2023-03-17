@@ -51,3 +51,28 @@
 }
 
 
+.cyberpunk-button {
+  border-radius: 15px; /* Esquinas redondeadas */
+  border: 3px solid #de3163; /* Borde de color #de3163 de 3px */
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  font-size: 20px; /* Tamaño de fuente */
+  padding: 10px 20px; /* Relleno */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición */
+  position: relative; /* Posición relativa para el efecto hover */
+  overflow: hidden; /* Para ocultar la sobra en el efecto hover */
+&:hover {
+  transform: translate3d(0, -15px, 0); /* Efecto de movimiento */
+  color: #de3163; /* Cambio de color en el hover */
+}
+  a {
+    text-decoration: none; /* Elimina el subrayado del texto */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+    cursor: pointer; /* Cambia el cursor a un cursor por defecto */
+  }
+
+}
+
+
+
+

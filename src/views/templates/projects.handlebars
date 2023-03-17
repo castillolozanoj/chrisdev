@@ -2,7 +2,7 @@
     <div class="container">
         <p class="title-dos text-center">algunos proyectos </p>
         <div class="grid-3">
-            <div class="card c-1">
+            {{!-- <div class="card c-1">
                 <div class="container">
                     <a href="https://github.com/jesus-khristian/Robonova1-nodeJS-Johnny-five-Arduino" target="_blanck"><img src="./img/robonova1.webp"
                             alt="robonova"></a>
@@ -13,8 +13,30 @@
                         <p class=" text-center sub-title">Control de 17 Servo motores via Wifi en tiempo real </p>
                     </div>
                 </div>
-            </div>
-            <div class="card c-2">
+            </div> --}}
+
+{{#each projects}}
+
+
+    <div class="card">
+             <h2 class="card-title">{{name}}</h2>
+        <img src='./img/{{nameImg}}' alt={{name}}>
+        <div class="card-content">
+       
+            <p class="card-description">{{description}}</p>
+            <button class="card-like">
+                <i class="fas fa-heart"></i>
+                Like</button>
+        </div>
+    </div>
+
+{{/each}}
+
+
+
+            {{!-- {{> projects / card}} --}}
+          
+            {{!-- <div class="card c-2">
                 <div class="container">
                     <a href="https://sensationled.herokuapp.com" target="_blanck"><img src="./img/sled310.webp"
                             alt="sensationL3D"></a>
@@ -25,8 +47,8 @@
                         <p class=" text-center sub-title">Iluminación Inteligente IoT </p>
                     </div>
                 </div>
-            </div>
-            <div class="card col-one">
+            </div> --}}
+            {{!-- <div class="card col-one">
                 <div class="container">
                     <a href="https://wificar.herokuapp.com" target="_blanck"><img src="./img/car.webp"
                             alt="wificar"></a>
@@ -37,7 +59,7 @@
                         <p class=" text-center sub-title">Control de un carrito via LAN en tiempo real</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <br><br><br>
