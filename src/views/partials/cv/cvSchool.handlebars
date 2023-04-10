@@ -1,54 +1,21 @@
-<div class="container ">
-    <div class="title-dos  text-center">
-        <p>historial académico</p>
-    </div>
-     <div class="container grid-2 text-center ">
-        <div class="title ">
-            <p>Universidad Politécnica del Valle de México</p>
+<div class="container">
+    <p class="title text-center">historial académico 👨‍🎓 </p>
+    {{#each school}}
+        <div class="container grid-2 text-center bg-azul-op5">
+            <div class="title-dos">
+                <p>{{ puesto }}</p>
+            </div>
+            <div class="title-dos">
+                <p>{{ empresaTiempo }}</p>
+            </div>
         </div>
-        <div class="title-tres ">
-            <p>05/2020 - Actual</p>
+        <div class="mt-1 grid-0 pb-3 bg-dos ">
+            <div class="sub-title-dos p-3 ">
+                {{#each skills}}
+                    <p>{{ descripcion }}</p>
+                {{/each}}
+                <hr class="mt-1"></div>
         </div>
-    </div>
-    <div class="grid-0 ">
-        <div class="sub-title-tres p-3 ">
-            <p>• Maestría en Tecnologías de la Información y Comunicaciones con Especialidad en Desarrollo de Sistemas de Computación y Comunicación. 
-                 Cursando 5to / 6</p>
-                 <p>• Especialidad en Desarrollo de Sistemas de Computación y Comunicación. </p>
-            
-            <hr class="mt-1">
-        </div>
-    </div>
-    <div class="container grid-2 text-center ">
-        <div class="title ">
-            <p>Universidad Politécnica del Valle de México</p>
-        </div>
-        <div class="title-tres ">
-            <p>05/2015 - 08/2019</p>
-        </div>
-    </div>
-    <div class="grid-0 ">
-        <div class="sub-title-tres p-3 ">
-            <p>• Ingeniero en Informática.</p>
-            <p>• Estancias y estadías en Sindicato Mexicano de Electricistas cumpliendo con un total de 1080 horas.</p>
-            <p>• Logros: Constancia por conferencia "Prototipo Sediho basada en arduino". </p>
-            
-            <hr class="mt-1">
-        </div>
-    </div>
-    <div class="container grid-2 text-center">
-        <div class="title  ">
-            <p>Instituto Leonardo Bravo AC.</p>
-        </div>
-        <div class="title-tres ">
-            <p>08/2001 - 01/2004</p>
-        </div>
-    </div>
-
-    <div class="grid-0 ">
-        <div class="sub-title-tres p-3">
-            <p>• Tecnico en Informática</p>
-            <hr class="mt-1">
-        </div>
-    </div>
+    {{/each}}
 </div>
+

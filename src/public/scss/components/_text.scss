@@ -1,34 +1,39 @@
+@import "colors";
 $negrita: bold;
+
 
 
 .title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 24px;
+  font-size: 3.3rem;
   padding: 3rem 3rem 1rem 3rem;
+  font-weight: 900;
 }
 
 .title-dos {
-  font-weight: $negrita;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
   padding: 1rem 0 2.5rem 0;
-  font-size: 4rem;
+  font-size: 2.1rem;
 }
 .title-tres {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
   padding: 3rem 2rem 1rem 2rem;
+  font-weight:700;
 }
 .sub-title {
-  padding: 0;
   font-size: 1rem;
-  color: #444444;
+  font-weight: 400;
 }
 
 .sub-title-dos {
-  padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 .sub-title-tres {
-  font-size: 1rem;
-  color: #444444;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .tx {

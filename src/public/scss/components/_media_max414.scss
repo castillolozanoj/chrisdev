@@ -1,15 +1,23 @@
 @media screen and (max-width: 414px) {
+  .container{
+    padding: 0px 10px !important;
+  }
   .container .title-dos {
-    font-size: 3rem !important;
-    font-weight: bold;
+    font-size: 1.2rem !important;
+    font-weight: 600;
   }
   .container .sub-title-dos {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .container .tx {
     font-size: 1rem;
   }
+
+  .container-special img{
+      max-width: 300px !important;
+    }
+  
   menu {
     background: #000 !important;
     a {
@@ -18,8 +26,25 @@
       text-decoration: none;
       line-height: 2.5;
       display: block;
-      font-size: 2em;
+      font-size: 1.3em;
       font-weight: bold;
     }
   }
+
+  .card {
+    img {
+      aspect-ratio: 1.45255 / 1;
+      flex: 1 0 0px;
+      max-width: 310px !important;
+      height: 320px;
+    }
+    .media-video {
+      aspect-ratio: 1.45255 / 1;
+      flex: 1 0 0px;
+      max-width: 310px;
+      height: 400px;
+      display: none;
+    }
+  }
+
 }

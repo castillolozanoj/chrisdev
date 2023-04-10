@@ -1,88 +1,82 @@
 const { Router } = require("express");
+const logger = require('../config/logger')
 const route = Router();
 const Recaptcha = require("express-recaptcha").RecaptchaV3;
+const { validationResult } = require("express-validator");
 
-// const recaptcha = new Recaptcha(
-//   process.env.SITE_KEY,
-//   process.env.SECRET_KEY_RECAPTCHA,
-//   { callback: "cb" }
-// );
-const { check, validationResult } = require("express-validator");
+
+const recaptcha = new Recaptcha(
+  process.env.SITE_KEY,
+  process.env.SECRET_KEY_RECAPTCHA,
+  { callback: "cb" }
+);
+
 const { Send } = require("../helpers/sendEmail");
+const {experience,school} = require('./data/dataExperience');
+const projects = require('./data/dataProjects');
+const metaTags = require('./data/dataMetaTags');
+const validateInputs = require ('./data/validateInputs')
 
-const Val = [
-  check("email").isEmail(),
-  check("name").isLength({ min: 10 }),
-  check("msg").isLength({ min: 10 })
-];
+route.get("/", async(req,res) =>{
+    try {
+       await res.render("index", {
+          layouts:"main",
+          metaTags
+        });
+    } catch (error) {
+      logger.error(error)
+    }
+})
 
-route.get("/start", (req, res) => {
-  res.locals.metaTags = { 
-    title: "Desarrollo Web Jr", 
-    description: "Sitio Web Personal www.chrisweb.me",   
-    keywords: "Jesus Christian Castillo Desarrollo web UPVM " 
-}; 
-  res.render("index", { layout: "main" });
+
+route.get("/projects", async (req, res) => {
+  try {
+    await res.render("templates/projects", {metaTags, projects} );
+  } catch (error) {
+    logger.error(error)
+  }
 });
 
-route.get("/projects", (req, res) => {
-  res.render("templates/projects",{
-    projects : [
-      { id:'001',
-        name: "Robooba 1", 
-        description:'Control de 17 Servo motores via Wifi en tiempo real', 
-        ref: 'https://github.com/jesus-khristian/Robonova1-nodeJS-Johnny-five-Arduino',
-        nameImg:'robonova1.webp'      
-      },
-      { id:'002',
-        name: "Sensation LED", 
-        description:'Iluminación Inteligente IoT',
-        ref: 'https://sensationled.herokuapp.com',
-        nameImg: 'sled310.webp'  
-      },
-      { id:'003',
-        name: "Wifi Car", 
-        description:'Control de un carrito via LAN en tiempo real',
-        ref: 'https://wificar.herokuapp.com',
-        nameImg: 'car.webp'  
-      },
-    ]
-  });
+
+route.get("/about-me", async (req, res) => {
+try {
+  await res.render("templates/profile",{metaTags});
+} catch (error) {
+  logger.error(error)
+}
 });
 
-// route.get("/aboutMe", recaptcha.middleware.render, (req, res) => {
-//   res.render("templates/profile");
-// });
 
-route.get("/aboutMe",  (req, res) => {
-  res.render("templates/profile");
+route.post("/about-me", recaptcha.middleware.verify, validateInputs, async(req, res) => {
+  if (req.recaptcha.error) {
+    await res.render("templates/profile", {
+      metaTags,
+      error_msg: "Por favor, seleccione la casilla NO SOY ROBOT"
+    });
+    return;
+  } 
+  try {
+    validationResult(req).throw();
+    const { name, email, msg } = req.body;
+    await Send(name, email, msg);
+    res.render("templates/profile", {
+      metaTags,
+      success_msg: "Email enviado correctamente, ¡gracias!"
+    });
+  } catch (err) {
+    logger.error(err.array());
+    const errors = err.array();
+    res.render("templates/profile", { metaTags,errors });
+  }
 });
 
-// route.post("/aboutMe", recaptcha.middleware.verify, Val, (req, res) => {
-//   if (!req.recaptcha.error) {
-//     try {
-//       validationResult(req).throw();
-//       const { name, email, msg } = req.body;
-//       Send(name, email, msg);
-//       res.render("templates/profile", {
-//         success_msg: "Email enviado correctamente, Gracias."
-//       });
-//     } catch (err) {
-//       console.log(err.array());
-//       const e = err.array();
-//       res.render("templates/profile", {
-//         e
-//       });
-//     }
-//   } else {
-//     res.render("templates/profile", {
-//       error_msg: "Por favor, seleccione la casilla NO SOY ROBOT"
-//     });
-//   }
-// });
-
-route.get("/cv", (req, res) => {
-  res.render("templates/cv");
+route.get("/cv", async (req, res) => {
+  try {
+    await res.render("templates/cv", {metaTags,experience, school});
+  } catch (error) {
+    logger.error(error)
+  }
 });
+
 
 module.exports = route;

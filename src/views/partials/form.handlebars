@@ -1,45 +1,28 @@
 <div class="container body-form ">
-   {{>error}}
-    <p class="title-dos text-center">contacto </p>
+    <p class="title text-center">contacto
+    </p>
     <div class="container">
-        {{!-- <form class="bg-cuatro" action="/aboutMe" method="POST">
-        <div class="mt-1 ">
-            <label class="form-txt" for="name">Nombre :</label>
-            <input class="text-center" type="text" name="name" placeholder="Nombre Completo" required>
-        </div>
-        <div class="mt-1">
-            <label class="form-txt" for="email">Email :</label>
-            <input class="text-center" type="email" name="email" placeholder="ejemplo. jesus@gmail.com" required>
-        </div>
-        <div class="mt-1">
-            <label class="form-txt" for="msg">Mensaje :</label>
-            <textarea class="text-center" name="msg" cols="30" rows="2"
-                placeholder="Comentarios, dudas o sugerencias"></textarea>
-        </div>
-        <div class="mt-1 btn-center">
-             <div class="g-recaptcha form-group" data-sitekey="6LeqtcQZAAAAALOmGEvokCKIf9dd6K217Hf9P3Cy">
+        <form action="/about-me" method="POST">
+            <label for="name">*Nombre completo 📛</label>
+            <input type="text" id="name" name="name" required>
 
-             </div>
-            <p>This site is protected by reCAPTCHA and the Google</p>
-            <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-            <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-        </div>
-            <button class="mybtn btn-right" type="submit">
-                Enviar
-            </button>
-    </form> --}}
-<form action="/aboutMe" method="POST">
-		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" name="nombre" required>
+            <label for="email">*Email 📧</label>
+            <input type="email" id="email" name="email" required>
 
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email" required>
-
-		<label for="mensaje">Mensaje:</label>
-		<textarea id="mensaje" name="mensaje" required></textarea>
-
-		<input type="submit" value="Enviar">
-	</form>
+            <label for="message">*Mensaje 💬</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="container mt-1">
+                <div class="g-recaptcha form-group" data-sitekey="6LdEoEYlAAAAANjmI-vLHfVncgXaJow0BurdcXut"></div>
+                <div class="sub-title">
+                    <p>This site is protected by reCAPTCHA and the Google</p>
+                    <a href="https://policies.google.com/privacy">Privacy Policy</a>
+                    and
+                    <a href="https://policies.google.com/terms">Terms of Service</a>
+                    apply.
+                </div>
+            </div>
+            <input class="cyberpunk-button mt-1 " type="submit" value="Enviar">
+        </form>
 
     </div>
 </div>

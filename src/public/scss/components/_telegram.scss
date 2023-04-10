@@ -1,0 +1,43 @@
+.telegram-float {
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    
+ 
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+ 
+    z-index: 2;
+}
+  
+  /* Estilos para el texto del botón */
+.telegram-float-text {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    left: -80px;
+    width: 160px;
+    background-color: #0088cc;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+  
+  /* Estilos para el icono del botón */
+.telegram-float-icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+  /* Mostrar el texto cuando se hace hover en el botón */
+.telegram-float:hover .telegram-float-text {
+    display: block;
+}

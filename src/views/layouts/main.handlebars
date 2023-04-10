@@ -8,14 +8,17 @@
   <!-- CODELAB: Add iOS meta tags and icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Jesus Christian Castillo Lozano">
-  <link rel="apple-touch-icon" href="/img/152.png">
-  <meta name="theme-color" content="#40b4fa">
-  <meta name="description" content="{{metaTags.description}}">
-  <meta name="keywords" content="{{metaTags.keywords}}"> 
+  <meta name="apple-mobile-web-app-title" content={{metaTags.title}}>
+  <link rel="apple-touch-icon" href="/images/152.png">
+  <meta name="theme-color" content="#39b5ff">
+  <meta name="description" content={{metaTags.metaDescription}}>
+  <meta name="keywords" content={{metaTags.metaKeyword}}> 
   <!--Open graph  -->
-  <meta property="og:title" content="Jesus Christian Castillo Lozano">
-  <meta property="og:image" content="/img/152.png">
+  <meta property="og:title" content={{metaTags.ogTitle}}>
+  <meta property="og:image" content={{metaTags.ogImage}}>
+  <meta property="og:url" content={{metaTags.ogUrl}}>
+  <meta property="og:description" content={{metaTags.ogDescription}}>
+
   <meta name="google-site-verification" content="w9LvMacOhjnWHfvECc7jtMkKKcNVSzRQKAovVEuPhFI" />
   <!-- My style -->
   <link rel="stylesheet" href="./css/style.css">
@@ -23,11 +26,15 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150948906-1"></script>
-  <title>Jesus Christian Castillo Lozano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&display=swap" rel="stylesheet">
+  <title>{{metaTags.title}}</title>
 </head>
 
 <body>
   {{>navbar}}
+  {{>error}}
   {{{body}}}
   {{>footer}}
 </body>

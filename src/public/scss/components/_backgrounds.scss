@@ -1,23 +1,37 @@
 @import "colors";
 
 .bg-uno {
-  background-image: linear-gradient($bg-opacity, $bg-opacity),
-    url(../img/C.webp);
+  background-image: linear-gradient($bg-opacity-6, $bg-opacity-6),
+    url(../images/C.webp);
 }
 
 .bg-dos {
-  background: $pantalla-azul;
+  background: $bg-opacity-7;
 }
 
 .bg-tres {
-  background-image: linear-gradient($bg-opacity, $bg-opacity),
-    url(../img/rocket.webp);
+  background-image: linear-gradient($bg-opacity-6, $bg-opacity-6),
+    url(../images/rocket.webp);
 }
 
 .bg-cuatro {
-  background: $azul;
+  background: $cereza;
 }
 
 .bg-cinco {
-  background: $cereza-opacity;
+  background: $cereza-opacity-5;
+}
+
+.bg-seis{
+  background-image: linear-gradient($bg-opacity-7, $bg-opacity-7),
+  url(../images/pattern-black.svg);
+  
+}
+
+.bg-withe{
+  background: $withe;
+}
+
+.bg-azul-op5{
+  background: $azul-opacity-5;
 }

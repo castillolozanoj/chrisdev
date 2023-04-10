@@ -20,9 +20,10 @@ Vl.Send = async (name, email, msg) => {
     <h2 style="text-align: center;">Tienes un nuevo mensaje de ${name}</h2> <br>
     <h2 style="text-align: center;">Correo electrónico ${email}</h2> <br>
     <h3 style="text-align: center;"> ${msg} </h3><br>
-    <hr style="color: #0056b2;" />
+    <hr style="color: #de3163;" />
     <br>
-   <p style="text-align: center;">© 2020 Copyright: www.chrisweb.digital </p> `
+    <p style="text-align: center;">Made with  ❤</p>
+   <p style="text-align: center;">© 2019Copyright: www.jesuschristiancastillolozano.com </p> `
   };
 
   const sm = await transporter.sendMail(mailOptions);

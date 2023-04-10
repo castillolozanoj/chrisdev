@@ -2,7 +2,7 @@
 
 .body-form {
   background-color: #000000;
-			color: $azul;
+			color: $cereza;
 			font-family: 'Orbitron', sans-serif;
 			font-size: 20px;
 			line-height: 1.5;
@@ -16,7 +16,7 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    text-shadow: 0 0 10px $azul;
+    text-shadow: 0 0 10px $cereza;
   }
 }
 
@@ -32,43 +32,43 @@ label {
   margin-bottom: 10px;
   text-align: center;
   font-size: 24px;
-  text-shadow: 0 0 10px $azul;
+  text-shadow: 0 0 10px $cereza;
 }
 
 input[type="text"], input[type="email"], textarea {
   background-color: #111111;
   border: none;
-  color: $azul;
+  color: $cereza;
   font-size: 20px;
   padding: 10px;
   margin-bottom: 20px;
   text-align: center;
   width: 400px;
   border-radius: 10px;
-  box-shadow: 0 0 10px $azul;
+  box-shadow: 0 0 10px $cereza;
 }
 
 input[type="submit"] {
-  background-color: $azul;
+  background-color: $cereza;
   color: #000000;
   font-size: 24px;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 0 10px $azul;
+  box-shadow: 0 0 10px $cereza;
   transition: all 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover {
   background-color: #000000;
-  color: $azul;
-  box-shadow: 0 0 20px $azul;
+  color: $cereza;
+  box-shadow: 0 0 20px $cereza;
 }
 
-// .mt-1 {
-//   margin-top: 2em;
-// }
+.mt-1 {
+  margin-top: 2em;
+}
 
 // label {
 //   display: inline-flex;

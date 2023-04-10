@@ -1,72 +1,20 @@
 <div class="container ">
-    <div class="title-dos  text-center">
-        <p>experiencia laboral</p>
-    </div>
-    <div class="container grid-2 text-center ">
-        <div class="title ">
-            <p>Desarrollador Node.js, React Js</p>
+    <p class="title text-center">experiencia laboral 👩‍🚀 </p>
+    {{#each experience}}
+        <div class="container grid-2 text-center bg-cinco ">
+            <div class="title-dos">
+                <p>{{ puesto }}</p>
+            </div>
+            <div class="title-dos">
+                <p>{{ empresaTiempo }}</p>
+            </div>
         </div>
-        <div class="title-tres ">
-            <p>BrainUp Co. | 12/2020 - 05/2021</p>
+        <div class="grid-0 pb-3 bg-dos ">
+            <div class="mt-1 sub-title-dos p-3 ">
+                {{#each skills}}
+                    <p>{{ descripcion }}</p>
+                {{/each}}
+                <hr class="mt-1"></div>
         </div>
-    </div>
-    <div class="grid-0 pb-3 ">
-        <div class="sub-title-tres p-3 ">
-            <p>•	Desarrollo de componentes funcionales reutilizables en ReactJs con Hooks</p>
-            <p>•	Implementación de librería Reactstrap para la creación de interfaz.</p>
-            <p>•	Pruebas unitarias utilizando framework Jest y enzime.</p>
-             <p>•	Implementación de arquitectura de datos basada en Redux.  </p>
-            <p>•	Desarrollo basado en pruebas y metodologías ágiles Scrum.</p>
-            <p>•	Control de versiones en Git</p>
-        
-            <hr class="mt-1">
-        </div>
-    </div>
-
-     <div class="container grid-2 text-center ">
-        <div class="title ">
-            <p>Desarrollador Node.js</p>
-        </div>
-        <div class="title-tres ">
-            <P>Aurora Phoenix UPVM | 05/2016 - 01/2019</p>
-        </div>
-    </div>
-    <div class="grid-0 pb-3 ">
-        <div class="sub-title-tres p-3 ">
-            <p>• Desarrollo de aplicaciones monoliticas RESTful NodeJS. </p>
-            <p>• Implementación de aplicaciones en la nube Digital ocean.</p>
-            <p>• Programacion en controladores Arduino, NodeMCU, Raspberry Pi.</p>
-            <p>• Implementación de arquitectura Cliente-Servidor.</p>
-            <p>• Control de versiones en Git.</p>
-            <p>• Desarrollo basado en metodologías ágiles Tablero Kanban (App Trello).</p>
-            <p>• Proyectos https://www.chrisweb.digital, https://sensationled.herokuapp.com,
-https://wifycar.herokuapp.com y en desarrollo https://tianguis.netlify.app</p>
-
-
-
-        
-            <hr class="mt-1">
-        </div>
-    </div>
-
-    <div class="container grid-2 text-center ">
-        <div class="title ">
-            <p>Validación y Back office, Call center American Express</p>
-        </div>
-        <div class="title-tres ">
-            <p>Grupo EULEN | 08/2012 - 05/2016</p>
-        </div>
-    </div>
-    <div class="grid-0 pb-3 ">
-        <div class="sub-title-tres p-3 ">
-            <p>• Generar reportes diarios  de  las diferentes campañas de American Express.</p>
-            <p>• Validar y capturar en linea la información del cliente de American Express.</p>
-            <p>• Brindar información a el cliente de American Express sobre tarjetas adicionales y seguros.</p>
-             <p>• Asistir a los operadores telefónicos por medio de chat para consultar Scores en buro de crédito.  </p>
-            <p>• Asistir a los colaboradores de validación en la captura de datos en la plataforma de American Express, entrega de documentos por parte del cliente y venta cruzada de seguros.</p>
-            <p>• Garantizar que los colaboradores de validación brinden un servicio de calidad a el cliente mediante el manejo correcto de vocabulario, información correcta del producto o servicio ofrecido.</p>
-            <p>• Organización de los colaboradores de validación y toma de decisiones en operación.</p>
-            <hr class="mt-1">
-        </div>
-    </div>
+    {{/each}}
 </div>

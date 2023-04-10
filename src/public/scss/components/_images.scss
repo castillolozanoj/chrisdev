@@ -1,7 +1,6 @@
 .myimg {
   display: flex;
   position: relative;
-  // clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   transition: width 1s, height 1s, margin-right 1s, margin-top 1s;
   width: 50rem;
   height: 20rem;
@@ -14,9 +13,8 @@
 .myimgMovil {
   display: flex;
   position: relative;
-  // clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   transition: width 1s, height 1s, margin-right 1s, margin-top 1s;
-  width: 50rem;
+  width: 23rem;
   height: 15rem;
   align-items: center;
   justify-content: center;
@@ -60,3 +58,43 @@
   }
 }
 
+
+
+.card.media-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.media-video {
+  aspect-ratio: 1.45255 / 1;
+  flex: 1 0 0px;
+  max-width: 660px;
+  height: 400px;
+  display: none;
+}
+.media-container.playing .media-video {
+  display: block;
+}
+
+.media-container.playing .media-image {
+  display: none;
+}
+
+.media-video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.media-video:hover .media-video-controls {
+  opacity: 1;
+}

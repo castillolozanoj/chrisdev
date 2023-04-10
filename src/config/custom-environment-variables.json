@@ -1,0 +1,33 @@
+{
+    "development" : {
+        "serverConfig" : {
+          "hostname" : "localhost",
+          "port" : "3001"
+        } 
+    },
+    "production" : {
+        "serverConfig" : {
+            "hostname" : "https://www.jesuschristiancastillolozano.com",
+            "port" : "8080"
+        }
+    },
+    "test" : {
+        "dbConfig" : {
+          "username" : "acaca",
+          "password" : "ajbcjdca",
+          "port" : "acdc",
+           "etc" : "etc"
+        },
+        "serverConfig" : {
+          "hostname" : "jabcjac.com",
+          "port" : "4545",
+          "etc" : "etc"
+        },
+        "AWSConfig" : {
+          "accessKey" : "akcakcbk",
+          "etc" : "etc"
+        }
+    }
+    }
+
+

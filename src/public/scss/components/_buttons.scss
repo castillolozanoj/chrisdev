@@ -34,19 +34,19 @@
 }
 
 .mybtn {
-  background-color: $azul;
+  background-color: $cereza;
   color: #000000;
   font-size: 24px;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 0 10px $azul;
+  box-shadow: 0 0 10px $cereza;
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: #000000;
-    color: $azul;
-    box-shadow: 0 0 20px $azul;
+    color: $cereza;
+    box-shadow: 0 0 20px $cereza;
   }
 }
 
@@ -66,6 +66,7 @@
   color: #de3163; /* Cambio de color en el hover */
 }
   a {
+    font-family: 'Orbitron', sans-serif;
     text-decoration: none; /* Elimina el subrayado del texto */
     color: inherit; /* Hereda el color del texto del elemento padre */
     cursor: pointer; /* Cambia el cursor a un cursor por defecto */

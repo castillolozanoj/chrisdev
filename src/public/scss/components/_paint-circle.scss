@@ -7,29 +7,29 @@ $java: "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png";
 $mongo: "https://img.icons8.com/color/96/000000/mongodb.png";
 $react: "https://img.icons8.com/color/96/000000/react-native.png";
 .html {
-  @include circular-progress(90, $html, #e85d25, $azul);
+  @include circular-progress(90, $html, #e85d25, $withe);
 }
 
 .css {
-  @include circular-progress(80, $css, #249cda, $azul);
+  @include circular-progress(80, $css, #249cda, $withe);
 }
 
 .js {
-  @include circular-progress(90, $js, #f7e018, $azul);
+  @include circular-progress(90, $js, #f7e018, $withe);
 }
 
 .nodejs {
-  @include circular-progress(90, $nodejs, #026e00, $azul);
+  @include circular-progress(90, $nodejs, #026e00, $withe);
 }
 .expressjs {
-  @include circular-progress(90, $expressjs, #111, $azul);
+  @include circular-progress(90, $expressjs, #111, $withe);
 }
 .java {
-  @include circular-progress(80, $java, #f60002, $azul);
+  @include circular-progress(80, $java, #f60002, $withe);
 }
 .mongo {
-  @include circular-progress(80, $mongo, #116149, $azul);
+  @include circular-progress(80, $mongo, #116149, $withe);
 }
 .react {
-  @include circular-progress(80, $react, #2196f3, $azul);
+  @include circular-progress(80, $react, #2196f3, $withe);
 }
