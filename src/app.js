@@ -36,6 +36,7 @@ if (process.env.NODE_ENV === 'production') {
     hostValidation({
       hosts: [
       `localhost:${app.get('port')}`,
+      'jesuschristiancastillolozano.vercel.app',
       'jesuschristiancastillolozano.com',
       'www.jesuschristiancastillolozano.com',
       /.*\.jesuschristiancastillolozano\.com$/
