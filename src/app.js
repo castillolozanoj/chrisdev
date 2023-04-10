@@ -6,7 +6,7 @@ const morgan = require('morgan')
 const favicon = require('serve-favicon')
 const helmet = require('helmet')
 const http = require('http').createServer(app)
-// const express_enforces_ssl = require('express-enforces-ssl')
+const express_enforces_ssl = require('express-enforces-ssl')
 const hostValidation = require('host-validation')
 const compression = require('compression')
 const logger = require('winston')
@@ -22,22 +22,15 @@ if (process.env.NODE_ENV === 'production') {
   app.use(helmet())
   app.use(compression())
   app.use(express.static('public', { maxAge: 86400000 }))
-  // app.use(express_enforces_ssl())
+  app.use(express_enforces_ssl())
   // Redirigimos todas las solicitudes HTTP a HTTPS
-  //  app.use((req, res, next) => {
-  //   if (req.protocol !== 'https') {
-  //     res.redirect(`https://${req.hostname}${req.url}`)
-  //   } else {
-  //     next()
-  //   }
-  // })
-
-  // const Rollbar = require('rollbar')
-  // const rollbar = new Rollbar({
-  //   accessToken: process.env.ROLLBAR,
-  //   captureUncaught: true,
-  //   captureUnhandledRejections: true
-  // })
+  app.use((req, res, next) => {
+    if (req.protocol !== 'https') {
+      res.redirect(`https://${req.hostname}${req.url}`)
+    } else {
+      next()
+    }
+  })
 
   app.use(
     hostValidation({
