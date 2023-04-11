@@ -7,7 +7,7 @@ const favicon = require('serve-favicon')
 const helmet = require('helmet')
 const http = require('http').createServer(app)
 const express_enforces_ssl = require('express-enforces-ssl')
-const hostValidation = require('host-validation')
+// const hostValidation = require('host-validation')
 const compression = require('compression')
 const logger = require('winston')
 
@@ -32,16 +32,16 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
 
-  app.use(
-    hostValidation({
-      hosts: [
-        'jesuschristiancastillolozano.netlify.app',
-        'jesuschristiancastillolozano.com',
-        'www.jesuschristiancastillolozano.com',
-        /.*\.jesuschristiancastillolozano\.com$/
-      ]
-    })
-  )
+  // app.use(
+  //   hostValidation({
+  //     hosts: [
+  //       'jesuschristiancastillolozano.netlify.app',
+  //       'jesuschristiancastillolozano.com',
+  //       'www.jesuschristiancastillolozano.com',
+  //       /.*\.jesuschristiancastillolozano\.com$/
+  //     ]
+  //   })
+  // )
 } else {
   logger.info('MODE DEVELOPER')
   app.use(express.static(path.join(__dirname, 'public')))
