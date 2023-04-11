@@ -24,13 +24,13 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('public', { maxAge: 86400000 }))
   app.use(express_enforces_ssl())
   // Redirigimos todas las solicitudes HTTP a HTTPS
-  app.use((req, res, next) => {
-    if (req.protocol !== 'https') {
-      res.redirect(`https://${req.hostname}${req.url}`)
-    } else {
-      next()
-    }
-  })
+  // app.use((req, res, next) => {
+  //   if (req.protocol !== 'https') {
+  //     res.redirect(`https://${req.hostname}${req.url}`)
+  //   } else {
+  //     next()
+  //   }
+  // })
 
   // app.use(
   //   hostValidation({
