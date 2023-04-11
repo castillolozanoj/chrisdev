@@ -11,42 +11,35 @@ const express_enforces_ssl = require('express-enforces-ssl')
 const compression = require('compression')
 const logger = require('winston')
 
-let config = require('./config/custom-environment-variables.json')[process.env.NODE_ENV] 
+// let config = require('./config/custom-environment-variables.json')[process.env.NODE_ENV]
 
-console.log('======>', config)
+app.set('trust proxy', 1)
+app.use(helmet())
+app.use(compression())
+app.use(express.static('public', { maxAge: 86400000 }))
+app.use(express_enforces_ssl())
+// Redirigimos todas las solicitudes HTTP a HTTPS
+// app.use((req, res, next) => {
+//   if (req.protocol !== 'https') {
+//     res.redirect(`https://${req.hostname}${req.url}`)
+//   } else {
+//     next()
+//   }
+// })
 
-if (process.env.NODE_ENV === 'production') {
-  logger.info('MODE PRODUCTION')
+// app.use(
+//   hostValidation({
+//     hosts: [
+//       'jesuschristiancastillolozano.netlify.app',
+//       'jesuschristiancastillolozano.com',
+//       'www.jesuschristiancastillolozano.com',
+//       /.*\.jesuschristiancastillolozano\.com$/
+//     ]
+//   })
+// )
 
-  app.set('trust proxy', 1)
-  app.use(helmet())
-  app.use(compression())
-  app.use(express.static('public', { maxAge: 86400000 }))
-  app.use(express_enforces_ssl())
-  // Redirigimos todas las solicitudes HTTP a HTTPS
-  // app.use((req, res, next) => {
-  //   if (req.protocol !== 'https') {
-  //     res.redirect(`https://${req.hostname}${req.url}`)
-  //   } else {
-  //     next()
-  //   }
-  // })
-
-  // app.use(
-  //   hostValidation({
-  //     hosts: [
-  //       'jesuschristiancastillolozano.netlify.app',
-  //       'jesuschristiancastillolozano.com',
-  //       'www.jesuschristiancastillolozano.com',
-  //       /.*\.jesuschristiancastillolozano\.com$/
-  //     ]
-  //   })
-  // )
-} else {
-  logger.info('MODE DEVELOPER')
-  app.use(express.static(path.join(__dirname, 'public')))
-  app.use(morgan('dev'))
-}
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(morgan('dev'))
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
