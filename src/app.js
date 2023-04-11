@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 // settings
-app.set('port', process.env.PORT)
+app.set('port', process.env.PORT || 3000)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'handlebars')
 // app.enable('view cache')
