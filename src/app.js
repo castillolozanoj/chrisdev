@@ -4,39 +4,9 @@ const path = require('path')
 const exphbs = require('express-handlebars')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
-const helmet = require('helmet')
+
 const http = require('http').createServer(app)
-const express_enforces_ssl = require('express-enforces-ssl')
-// const hostValidation = require('host-validation')
-const compression = require('compression')
 const logger = require('winston')
-
-// let config = require('./config/custom-environment-variables.json')[process.env.NODE_ENV]
-
-app.set('trust proxy', 1)
-app.use(helmet())
-app.use(compression())
-app.use(express.static('public', { maxAge: 86400000 }))
-app.use(express_enforces_ssl())
-// Redirigimos todas las solicitudes HTTP a HTTPS
-// app.use((req, res, next) => {
-//   if (req.protocol !== 'https') {
-//     res.redirect(`https://${req.hostname}${req.url}`)
-//   } else {
-//     next()
-//   }
-// })
-
-// app.use(
-//   hostValidation({
-//     hosts: [
-//       'jesuschristiancastillolozano.netlify.app',
-//       'jesuschristiancastillolozano.com',
-//       'www.jesuschristiancastillolozano.com',
-//       /.*\.jesuschristiancastillolozano\.com$/
-//     ]
-//   })
-// )
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
@@ -48,7 +18,7 @@ app.use(express.json())
 app.set('port', process.env.PORT)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'handlebars')
-app.enable('view cache')
+// app.enable('view cache')
 
 // config Dir express-handlebars
 app.engine(
@@ -77,35 +47,3 @@ app.use(function (err, req, res, next) {
 })
 
 module.exports = { app, http }
-
-// app.use(
-//   hostValidation({
-//     hosts: [
-//       '127.0.0.1:8080',
-//       `localhost:${app.get('port')}`,
-//       'chrisweb.tech',
-//       'www.chrisweb.tech',
-//       /.*\.chrisweb\.tech$/
-//     ]
-//   })
-// )
-
-// middleware
-// app.enable('trust proxy')
-// app.use(express_enforces_ssl())
-// app.use(
-//   helmet({
-//       contentSecurityPolicy: {
-//           directives: {
-//            defaultSrc:[''self''],
-// 				   scriptSrc:[''self'','code.jquery.com','maxcdn.bootstrapcdn.com','https://www.gstatic.com/recaptcha/', 'googletagmanager.com','https://www.google.com/recaptcha/','https://recaptcha.google.com/recaptcha/'],
-// 				   styleSrc: [''self'', ''unsafe-inline''],
-// 				   fontSrc:[''self'','maxcdn.bootstrapcdn.com'],
-//            imgSrc:[''self'', 'img.icons8.com'],
-//            frameSrc: [''self'', 'https://www.google.com', 'https://recaptcha.google.com/recaptcha/','https://www.google.com/recaptcha/'],
-//            objectSrc: [''none''],
-//            mediaSrc: [''self''],
-//           }
-//       },
-//   })
-// )
