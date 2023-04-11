@@ -35,10 +35,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(
     hostValidation({
       hosts: [
-      `localhost:${app.get('port')}`,
-      'jesuschristiancastillolozano.com',
-      'www.jesuschristiancastillolozano.com',
-      /.*\.jesuschristiancastillolozano\.com$/
+        'jesuschristiancastillolozano.netlify.app',
+        'jesuschristiancastillolozano.com',
+        'www.jesuschristiancastillolozano.com',
+        /.*\.jesuschristiancastillolozano\.com$/
       ]
     })
   )
