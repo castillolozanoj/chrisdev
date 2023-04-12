@@ -1,22 +1,23 @@
 const experience = [
-        {id:'001', 
-         puesto: 'Consultor de Micro servicios Node.js', 
-         empresaTiempo: ' Quarksoft | Julio 2022 - Agosto 2022', 
-         skills: 
+  {
+    id: '001',
+    puesto: 'Consultor de Micro servicios Node.js',
+    empresaTiempo: ' Quarksoft | Julio 2022 - Agosto 2022',
+    skills:
           [
-            {id:'1', descripcion:'• Desarrollar, probar y liberar proyectos de desarrollo de software a la medida, mediante el seguimiento de los procesos, el uso de herramientas de apoyo y node.js, con la finalidad de terminar el proyecto dentro de la planeación programada y con calidad establecida.'},
-  
+            { id: '1', descripcion: '• Desarrollar, probar y liberar proyectos de desarrollo de software a la medida, mediante el seguimiento de los procesos, el uso de herramientas de apoyo y node.js, con la finalidad de terminar el proyecto dentro de la planeación programada y con calidad establecida.' }
           ]
-        },
-        {id:'002', 
-        puesto: 'Desarrollador Node.js', 
-        empresaTiempo: 'Interware| Mayo 2022 - Junio 2022', 
-        skills: 
+  },
+  {
+    id: '002',
+    puesto: 'Desarrollador Node.js',
+    empresaTiempo: 'Interware| Mayo 2022 - Junio 2022',
+    skills:
          [
-           {id:'1', descripcion:'• Análisis y implementación de micro servicios en Node.js.'},
-           {id:'2', descripcion:'• Utilización de base de datos MongoDB.'},
+           { id: '1', descripcion: '• Análisis y implementación de micro servicios en Node.js.' },
+           { id: '2', descripcion: '• Utilización de base de datos MongoDB.' }
          ]
-       },
+  },
         {id:'003', 
          puesto: 'Desarrollador full stack Node.js', 
          empresaTiempo: 'KAO Hoteles | Octubre 2021 - Febrero 2022', 
