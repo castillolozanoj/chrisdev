@@ -14,7 +14,7 @@
   display: flex;
   position: relative;
   transition: width 1s, height 1s, margin-right 1s, margin-top 1s;
-  width: 23rem;
+  width: 23rem !important;
   height: 15rem;
   align-items: center;
   justify-content: center;
