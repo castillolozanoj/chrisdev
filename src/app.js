@@ -4,6 +4,7 @@ const path = require('path')
 const exphbs = require('express-handlebars')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
+const helmet = require('helmet')
 
 const http = require('http').createServer(app)
 const logger = require('winston')
@@ -13,6 +14,12 @@ app.use(morgan('dev'))
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+
+// security
+app.use(helmet({
+  referrerPolicy: { policy: 'no-referrer' }
+}))
+app.disable('x-powered-by')
 
 // settings
 app.set('port', process.env.PORT || 3000)

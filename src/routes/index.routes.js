@@ -16,7 +16,7 @@ const projects = require('./data/dataProjects')
 const metaTags = require('./data/dataMetaTags')
 const validateInputs = require('./data/validateInputs')
 
-route.get('/', async (req, res) => {
+route.get('/desarrollador-javascript-energia-sostenible', async (req, res) => {
   try {
     await res.render('index', {
       layouts: 'main',
