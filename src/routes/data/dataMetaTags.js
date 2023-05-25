@@ -5,6 +5,6 @@ module.exports = {
   ogTitle: 'Jesús Christian Castillo Lozano - Desarrollador de JavaScript | Energía sostenible y tecnología',
   ogUrl: 'https://castillolozano.ddns.net',
   ogDescription: 'Descubre mis habilidades como desarrollador de JavaScript y mi objetivo de utilizar la tecnología para crear un mundo más sostenible. Visita mi sitio web personal para conocer más sobre mi trabajo y cómo podemos juntos aumentar la energía en nuestro planeta.',
-  ogImage: 'https://castillolozano.ddns.net/images/logo_chris1.webp',
+  ogImage: 'https://castillolozano.ddns.net/images/C.webp',
   ogType: 'profile site'
 }
