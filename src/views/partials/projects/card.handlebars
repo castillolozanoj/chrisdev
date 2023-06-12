@@ -2,26 +2,25 @@
 {{#each projects}}
 
 
-    <div class="card bg-withe">
+    <div class="card">
          <div class="media-container">
             <img src='./images/{{nameImg}}' alt={{name}} class="media-image">
              <video src="./video/{{nameVideo}}" class="media-video"></video>
          </div>
-            
             <h2 class="card-title text-center pt-1 pb-1 ">{{name}}</h2>
         <div class="card-content">
        {{#if description_part1}}
-            <p class="card-description bg-dos">{{description_part1}}</p>
+            <p class="card-description">{{description_part1}}</p>
        {{/if}}     
        {{#if description_part2}}
-            <p class="card-description bg-dos">{{description_part2}}</p>
+            <p class="card-description">{{description_part2}}</p>
        {{/if}}
        {{#if description_part3}}     
-            <p class="card-description bg-dos">{{description_part3}}</p>
+            <p class="card-description">{{description_part3}}</p>
         {{/if}}    
             <div class="container grid-2">
                 <button class="card-like like-button" data-id={{id}}>Me gusta 💛</button>
-                <p class="like-count text-center bg-dos" data-id={{id}}>0</p>
+                <p class="like-count text-center" data-id={{id}}>0</p>
             </div>
         </div>
     </div>

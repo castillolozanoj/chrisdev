@@ -4,7 +4,7 @@ const path = require('path')
 const exphbs = require('express-handlebars')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
-const helmet = require('helmet')
+// const helmet = require('helmet')
 
 const http = require('http').createServer(app)
 const logger = require('winston')

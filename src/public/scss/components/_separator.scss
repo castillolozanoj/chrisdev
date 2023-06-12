@@ -13,3 +13,31 @@
     transform: skewY(6deg);
     transform-origin: top right;
   }
+
+  .line-separator-azul{
+    border: 8px solid $azul;
+  }
+  .line-separator-cereza{
+    border: 8px solid $cereza;
+  }
+ 
+
+  .mt-2{
+    margin-top: 2px;
+  }
+
+  .mt-4{
+    margin-top: 4px;
+  }
+
+  .mt-6{
+    margin-top: 6px;
+  }
+
+  .m-13{
+    margin: 13px; 
+  }
+
+  .mb-6{
+    margin-bottom: 6px;
+  }

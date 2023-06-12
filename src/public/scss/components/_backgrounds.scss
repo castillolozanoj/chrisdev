@@ -7,11 +7,15 @@
 
 .bg-dos {
   background: $bg-opacity-7;
+  border: 8px solid #ddd;
+  border-radius: 5%;
+  box-shadow: 10px 5px 5px $shadow-grey;
+  margin-bottom: 13px;
 }
 
 .bg-tres {
   background-image: linear-gradient($bg-opacity-6, $bg-opacity-6),
-    url(../images/rocket.webp);
+    url(../images/rocket.webp); 
 }
 
 .bg-cuatro {
@@ -20,18 +24,28 @@
 
 .bg-cinco {
   background: $cereza-opacity-5;
+  border-radius: 15px;
 }
 
 .bg-seis{
   background-image: linear-gradient($bg-opacity-7, $bg-opacity-7),
   url(../images/pattern-black.svg);
-  
 }
 
 .bg-withe{
   background: $withe;
 }
 
+.bg-grey{
+  background: #ddd;
+}
+
 .bg-azul-op5{
   background: $azul-opacity-5;
+  border-radius: 15px;
+
+}
+
+.bg-cereza-azul{
+  background: linear-gradient(to left, #e55d87, #5fc3e4); 
 }

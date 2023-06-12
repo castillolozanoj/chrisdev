@@ -213,22 +213,34 @@ section {
 
 
   .div-sec{
-    position: absolute;
+  position: absolute;
+  margin:2rem;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  
   height: 100%;
-  background: $withe;
+  background: $bg-opacity-7;
   z-index: -1;
   transform: skewY(-6deg);
   transform-origin: top left;
-    border: 8px solid $azul;
-    
-  }
-  .line-separator{
-    border: 8px solid $azul;
+  border: 8px solid $bg-opacity-9;
+  box-shadow: 10px 5px 5px $shadow-grey;
   }
  
+  .div-sec-2{
+    position: absolute;
+    margin:2rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50%;
+    background: $bg-opacity-7;
+    z-index: -1;
+    transform: skewY(6deg);
+    transform-origin: top left;
+    border: 8px solid $bg-opacity-9;
+    box-shadow: 10px 5px 5px $shadow-grey;
+    }
 

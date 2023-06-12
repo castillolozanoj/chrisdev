@@ -6,7 +6,7 @@ $(document).ready(function(){
           .slideToggle();
       });
 
-    $(".menu").css({ "background-color": "#f2f3f4" });
+    $(".menu").css({ "background-color": "rgba(242, 243, 244, .3)" });
     $(".myimg").css({
       "margin-top": ".3rem",
       "width": "30rem",
